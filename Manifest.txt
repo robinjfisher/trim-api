@@ -1,0 +1,8 @@
+.autotest
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/trim_api
+lib/trim_api.rb
+test/test_trim_api.rb
