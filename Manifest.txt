@@ -4,5 +4,6 @@ Manifest.txt
 README.txt
 Rakefile
 bin/trim_api
+lib/trim-api/trim-api.rb
 lib/trim_api.rb
 test/test_trim_api.rb

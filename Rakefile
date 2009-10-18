@@ -4,7 +4,7 @@ require 'rubygems'
 require 'hoe'
 
 Hoe.spec 'trim_api' do
-  developer('robinjfisher@capturedsparks.com')
+  developer('Robin Fisher', 'robinjfisher@capturedsparks.com')
 
   # self.rubyforge_name = 'trim_apix' # if different than 'trim_api'
 end

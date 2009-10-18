@@ -1,3 +1,9 @@
-class TrimApi
-  VERSION = '1.0.0'
+require 'rubygems'
+require 'httpclient'
+require 'json'
+require 'CGI'
+require 'trim-api/trim-api.rb'
+
+module TrimApi
+  VERSION = '0.0.1'
 end
