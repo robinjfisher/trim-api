@@ -1,5 +1,6 @@
 module TrimApi
   
+  VERSION = "0.0.1"
   API_URL = "http://api.tr.im/api/"
   
   class TrimError < StandardError
