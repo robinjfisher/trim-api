@@ -8,11 +8,7 @@ A simple Ruby library for accessing the tr.im API
 
 == FEATURES/PROBLEMS:
 
-* FIX
-
-== SYNOPSIS:
-
-* FIX
+Currently only supports the trimming of a URL with limited error checking.
 
 == REQUIREMENTS:
 
@@ -22,7 +18,8 @@ The following gems are required:
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+gem sources -a http://gemcutter.org
+gem install trim_api
 
 == LICENSE:
 

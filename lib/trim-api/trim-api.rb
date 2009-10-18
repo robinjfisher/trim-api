@@ -1,5 +1,7 @@
 module TrimApi
   
+  API_URL = "http://api.tr.im/api/"
+  
   class TrimError < StandardError
   end
   
@@ -9,25 +11,19 @@ module TrimApi
       @client = HTTPClient.new
     end
     
-    def trim(original_url, options = {})
+    def trim(original_url)
       raise ArgumentError.new(":url to shorten is required") if original_url.nil?
-      response = @client.get_content(create_url(original_url, options))
+      response = @client.get_content(create_url(original_url))
       data = JSON.parse(response)
-      raise TrimError.new(data["status"]["result"]) unless data["status"]["code"] == "200"?
       data["url"]
     end
     
     private
     
-    def create_url(original_url, options)
-      base_url = "http://api.tr.im/api/trim_url.json?"
-      url = "url=#{CGI::escape(url)}"
-      if !options.nil?
-        base_url + url
-      else
-        options = options.map { |k,v| "%s=%s" % [CGI::escape(k.to_s), CGI::escape(v.to_s)] }.join("&")
-        base_url + url + options
-      end
+    def create_url(original_url)
+      base_url = "#{API_URL}trim_url.json?"
+      url = "url=#{CGI::escape(original_url)}"
+      base_url + url
     end
     
   end
