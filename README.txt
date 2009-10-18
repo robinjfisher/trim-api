@@ -1,22 +1,24 @@
 = trim_api
 
-* FIX (url)
+http://github.com/robinjfisher/trim-api
 
 == DESCRIPTION:
 
-FIX (describe your package)
+A simple Ruby library for accessing the tr.im API
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* FIX
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+* FIX
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+The following gems are required:
+
+- HTTPClient
 
 == INSTALL:
 
@@ -26,7 +28,7 @@ FIX (describe your package)
 
 (The MIT License)
 
-Copyright (c) 2009 FIX
+Copyright (c) 2009 captured sparks
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
