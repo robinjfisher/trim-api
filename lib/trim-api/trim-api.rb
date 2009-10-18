@@ -3,6 +3,11 @@ module TrimApi
   API_URL = "http://api.tr.im/api/"
   
   class TrimError < StandardError
+    
+    def initialize(code, message)
+      super("#{code} - #{message}")
+    end
+    
   end
   
   class Trim
@@ -15,7 +20,11 @@ module TrimApi
       raise ArgumentError.new(":url to shorten is required") if original_url.nil?
       response = @client.get_content(create_url(original_url))
       data = JSON.parse(response)
-      data["url"]
+      unless data["status"]["result"] == "OK"
+        raise TrimError.new(data["status"]["code"],data["status"]["message"])
+      else
+        data["url"]
+      end
     end
     
     private

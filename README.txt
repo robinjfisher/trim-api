@@ -19,7 +19,17 @@ The following gems are required:
 == INSTALL:
 
 gem sources -a http://gemcutter.org
-gem install trim_api
+gem install trim-api
+
+== USAGE:
+
+require 'rubygems'
+require 'trim_api'
+
+api = TrimApi::Trim.new
+api.trim("http://www.google.com/")
+
+Returns the trimmed url as a string.
 
 == LICENSE:
 
