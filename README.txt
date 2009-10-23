@@ -8,7 +8,8 @@ A simple Ruby library for accessing the tr.im API
 
 == FEATURES/PROBLEMS:
 
-Currently only supports the trimming of a URL with limited error checking.
+Supports trimming and expanding of URLS.
+More features coming soon.
 
 == REQUIREMENTS:
 
