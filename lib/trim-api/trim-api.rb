@@ -17,7 +17,7 @@ module TrimApi
     
     def initialize(options = {})
       @client = HTTPClient.new
-      self.username = options[:login] if options[:login]
+      self.username = options[:username] if options[:username]
       self.password = options[:password] if options[:password]
     end
     
@@ -32,10 +32,10 @@ module TrimApi
       end
     end
     
-    def destination(trimmed_url, options = {})
+    def trim_destination(trimmed_url, options = {})
       raise ArgumentError.new(":trimmed url is required") if trimmed_url.nil?
-      raise ArgumentError.new(":username and password are required") if (login.nil? || password.nil?)
-      response = @client.get_content(create_url("trim_destination", {:trimpath => trimmed_url, :login => login, :password => password}))
+      raise ArgumentError.new(":username and password are required") if (username.nil? || password.nil?)
+      response = @client.get_content(create_url("trim_destination", {:trimpath => trimmed_url, :username => username, :password => password}))
       data = JSON.parse(response)
       unless data["status"]["result"] == "OK"
         raise TrimError.new(data["status"]["code"],data["status"]["message"])
