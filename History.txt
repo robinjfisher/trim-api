@@ -1,3 +1,8 @@
+=== 0.1 / 2009-10-23
+
+* Added trim_destination method that returns the destination for a trimmed url
+* Added authentication (currently only required for trim_destination)
+
 === 0.0.1 / 2009-10-18
 
 * Initial release
