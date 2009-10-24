@@ -5,5 +5,5 @@ require 'CGI'
 require 'trim-api/trim-api.rb'
 
 module TrimApi
-  VERSION = '0.1'
+  VERSION = '0.3'
 end

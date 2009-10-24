@@ -27,16 +27,24 @@ gem install trim-api
 require 'rubygems'
 require 'trim_api'
 
-* Authentication on the initialisation is only required if you intend to use an API call that requires authentication. For example, to trim a URL, no authentication is required.
+* Authentication on the initialisation is only required if you intend to use an API call that requires authentication. For example, to trim a url, no authentication is required.
 
 api = TrimApi::Trim.new(:username => "username", :password => "password")
 api.trim("http://www.google.com/")
 
-Returns the trimmed url as a string.
+Returns the trimmed url as a string in the format http://tr.im/ABCD
 
 api.trim_destination("CMo5")
 
 Returns the original destination as a string.
+
+api.trim_reference("CMo5")
+
+Returns the reference for the trimmed url if the authenticated user owns the trimmed url.
+
+api.trim_claim("dkajdsakjdamnsdsma")
+
+Claims a url identified by the unique reference obtained by trim_reference and attaches it to the authenticated user's account.
 
 == LICENSE:
 
